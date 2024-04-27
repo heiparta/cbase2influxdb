@@ -1,0 +1,6 @@
+pip-tools
+build
+ruff
+mypy
+types-PyYAML
+-r requirements.txt

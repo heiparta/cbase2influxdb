@@ -1,0 +1,2 @@
+[console_scripts]
+cbase2influxdb = cbase2influxdb.cbase2influxdb:run

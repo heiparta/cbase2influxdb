@@ -1,0 +1,5 @@
+.venv
+config.yaml
+.mypy_cache
+.ruff_cache
+build

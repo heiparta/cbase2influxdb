@@ -1,0 +1,31 @@
+[project]
+name = "cbase2influxdb"
+version = "0.0.1"
+authors = [
+    {name = "Heikki Partanen", email = "heikki.partanen@gmail.com"}
+]
+description = "Service for collecting data from CBase API and delivering it to InfluxDB"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.scripts]
+cbase2influxdb = "cbase2influxdb.cbase2influxdb:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[[tool.mypy.overrides]]
+module = [
+    "influxdb"
+]
+ignore_missing_imports = true
